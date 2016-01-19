@@ -33,16 +33,7 @@ awk -v seed=907 'BEGIN{srand(seed);}{ if (rand() < 0.5 ) {print $0}}' gencode.v1
 echo '--- Last 10 lines ---'
 tail gencode.v19.annotation.chr22.transcript.promoter.gtf
 
-#Exercise 4
-# Use bedtools intersect to find which promoters overlap
-# with the NFKB binding sites. Promoters = "A" and binding sites
-# = "B"
-bedtools intersect -a gencode.v19.annotation.chr22.transcript.promoter.gtf \
--b tf.nfkb.bed > gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf
-wc -l gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf
-echo '--- First 10 lines ---'
-head gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf
-echo '--- Random 10 lines ---'
-awk -v seed=908 'BEGIN{srand(seed);}{ if (rand() < 0.5 ) {print $0}}' gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf | head
-echo '--- Last 10 lines ---'
-tail gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf
+
+
+
+echo "Hello I am a message in standard out (stout)"
