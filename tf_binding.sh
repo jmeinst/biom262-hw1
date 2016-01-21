@@ -31,4 +31,11 @@ bedtools intersect -a gencode.v19.annotation.chr22.transcript.promoter.gtf -b tf
 #Exercise 5
 bedtools getfasta -fi GRCh37.p13.chr22.fa -bed gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf -s -fo gencode.v19.annotation.chr22.transcript.promoter.nfkb.fasta
 
+
+#Excercise 6
+echo 'NFKB promoters matching canonical sequence'
+grep GG[AG][AG][AGCT][AGCT][CT][CT]CC gencode.v19.annotation.chr22.transcript.promoter.nfkb.fasta | wc -l
+echo 'total NFKB promoters'
+grep ^[ACGT] gencode.v19.annotation.chr22.transcript.promoter.nfkb.fasta | wc -l
+
 echo "Hello I am a message in standard error (stderr) >&2
