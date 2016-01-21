@@ -25,7 +25,6 @@ bedtools intersect -a gencode.v19.annotation.chr22.transcript.promoter.gtf -b tf
 #Exercise 5
 bedtools getfasta -fi GRCh37.p13.chr22.fa -bed gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf -s -fo gencode.v19.annotation.chr22.transcript.promoter.nfkb.fasta
 
-<<<<<<< HEAD
 
 #Excercise 6
 echo 'NFKB promoters matching canonical sequence'
